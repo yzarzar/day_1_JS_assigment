@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select an Image</title>
+  </head>
+  <body>
+    <div>
+      <h1>Select an Image</h1>
+      <select id="imageSelect" onchange="updateImage()">
+        <option value="">Select an Image</option>
+        <option value="image1">Image 1</option>
+        <option value="image2">Image 2</option>
+        <option value="image3">Image 3</option>
+      </select>
+      <div>
+        <img
+          id="selectedImage"
+          src=""
+          alt="Selected Image"
+          style="display: none; width: 300px; height: 200px"
+        />
+      </div>
+    </div>
+
+    <script src="./assets/js/selectbox_script.js"></script>
+  </body>
+</html>

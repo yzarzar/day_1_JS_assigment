@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise two</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="">Number</label>
+      <input type="number" id="input-number" />
+      <div class="info"></div>
+    </form>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const inputNumber = document.getElementById("input-number");
+        const info = document.getElementsByClassName("info")[0];
+
+        inputNumber.addEventListener("input", function () {
+        //   const inputNumber = document.getElementById("input-number").value;
+          let currentNum = Number(this.value);
+
+          info.innerHTML = `Original value: ${currentNum} <br />
+                Two Decimal Places (2): ${currentNum.toFixed(2)} <br />
+                Exponential Form (3): ${currentNum.toExponential(3)} <br />
+                Is integer: ${Number.isInteger(currentNum)} <br />`;
+        });
+      });
+    </script>
+  </body>
+</html>
